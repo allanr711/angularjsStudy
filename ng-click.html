@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="angular.min.js"></script>
+  </head>
+  <body>
+    <div ng-app="">
+      <input type="checkbox" ng-model="enableDisable"> Disable <br>
+      <button ng-disabled="enableDisable" ng-init="increaseNumber = 0" ng-click="increaseNumber = increaseNumber + 1">+1</button>
+      <p ng-bind="increaseNumber"></p>
+    </div>
+  </body>
+</html>

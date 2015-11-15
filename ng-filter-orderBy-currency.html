@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="angular.min.js"></script>
+  </head>
+  <body>
+    <table ng-app="" ng-init="employeeYearlySalary = [{name: 'Allan', salary: '100000'}, {name: 'Mark', salary: 93000}]">
+      <tr>
+        <th>Employee</th>
+        <th>Salary</th>
+      </tr>
+
+      <tr ng-repeat="employee in employeeYearlySalary | orderBy: '-salary'">
+        <td ng-bind="employee.name | uppercase"></td>
+        <td ng-bind="employee.salary | currency"></td>
+      </tr>
+    </table>
+  </body>
+</html>

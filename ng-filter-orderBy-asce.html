@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="angular.min.js"></script>
+  </head>
+  <body>
+    <table ng-app="" ng-init="player = [{name: 'Kobe', rank: 2}, {name: 'Jordan', rank: 1}, {name: 'LeBron', rank: 3}]">
+      <tr>
+        <th>Name</th>
+        <th>Rank</th>
+      </tr>
+
+      <tr ng-repeat="ballers in player | orderBy: 'rank'">
+        <td ng-bind="ballers.name"></td>
+        <td ng-bind="ballers.rank"></td>
+      </tr>
+    </table>
+  </body>
+</html>
