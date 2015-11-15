@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="angular.min.js"></script>
+  </head>
+  <body>
+    <div ng-app="appOne" ng-controller="myControllerOne">
+      First Numbder <input type="number"  ng-model="x"><br>
+      Second Number <input type="numbder" ng-model="y"><br>
+
+      Sum {{x + y}}
+    </div>
+    
+    <div ng-app="appTwo" ng-controller="myController">
+      First Numbder <input type="number"  ng-model="x"><br>
+      Second Number <input type="numbder" ng-model="y"><br>
+
+      Sum {{x + y}}
+    </div>
+    <script>
+    var appOne = angular.module('appOne', []);
+    appOne.controller('myControllerOne', function($scope) {
+      $scope.x = 1;
+      $scope.y = 2;
+    });
+
+    var appTwo = angular.module('appTwo', []);
+    appTwo.controller('myController', function($scope) {
+      $scope.x = 1;
+      $scope.y = 2;
+    });
+    </script>
+  </body>
+</html>

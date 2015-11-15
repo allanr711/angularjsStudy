@@ -7,10 +7,10 @@
     <script src="angular.min.js"></script>
   </head>
   <body>
-    <div ng-app="">
-      <input type="number" ng-model="x">
-      <input type="number" ng-model="y">
-      <p>{{x + y}}</p>
+    <div ng-app="" ng-init="Employee= {name: 'Allan', birth: 'Feb 12', location: 'Los Angeles'}">
+      <p ng-bind="Employee.name"></p>
+      <p ng-bind="Employee.birth"></p>
+      <p ng-bind="Employee.location"></p>
     </div>
   </body>
 </html>

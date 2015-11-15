@@ -7,10 +7,9 @@
     <script src="angular.min.js"></script>
   </head>
   <body>
-    <div ng-app="">
-      <input type="number" ng-model="x">
-      <input type="number" ng-model="y">
-      <p>{{x + y}}</p>
+    <div ng-app="" ng-init="myArray=[1,2,3,4]">
+      <p ng-bind="myArray[0]"></p>
+      <p>{{myArray[3]}}</p>
     </div>
   </body>
 </html>
