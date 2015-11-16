@@ -8,18 +8,18 @@
   </head>
   <body ng-app="myApp">
     <form action="" ng-controller="myController">
-      <input type="number" ng-model="a">
-      <input type="number" ng-model="b">
+      <textarea ng-model="a"></textarea><br>
+      <textarea ng-model="b"></textarea><br>
 
-      <p>Sum: {{a + b}}</p>
+      <p>{{a+' '+b}}</p>
     </form>
 
     <script>
       var app = angular.module('myApp', []);
-      controller('myController', function($scope) {
+      app.controller('myController', function($scope) {
         $scope.a = 1;
         $scope.b = 2;
-      });
+      })
     </script>
   </body>
 </html>
