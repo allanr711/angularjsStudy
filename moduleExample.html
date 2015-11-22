@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="angular.min.js"></script>
+  </head>
+  <body ng-app="areaTrinagle">
+    <h1>Area of a trinagle</h1>
+    <form action="areaController">
+      <input type="number" ng-model="height"><br>
+      <input type="number" ng-model="length"><br>
+      
+      <p>{{(height * length)/2}}</p>
+    </form>
+    <script>
+      var app = angular.module('areaTrinagle', []);
+      app.controller('areaController', function($scope){
+        $scope.height = 0;
+        $scope.length = 0;
+      });
+    </script>
+  </body>
+</html>

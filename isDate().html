@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="angular.min.js"></script>
+  </head> 
+  <body ng-app="myApp" ng-controller="myController">
+
+    <script>
+      var myDate = '02-12-1985';
+      var dateObject = new Date(myDate);
+
+      document.write(angular.isDate(myDate));
+      document.write(angular.isDate(dateObject));
+    </script>
+  </body>
+</html>

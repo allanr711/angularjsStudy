@@ -10,16 +10,15 @@
     <form action="" ng-controller="myController">
       <textarea ng-model="a"></textarea><br>
       <textarea ng-model="b"></textarea><br>
-
-      <p>{{a+' '+b}}</p>
+      <p>Sum : {{a + ' ' + b}}</p>
     </form>
-
+    
     <script>
-      var app = angular.module('myApp', []);
-      app.controller('myController', function($scope) {
-        $scope.a = 1;
-        $scope.b = 2;
-      })
+        var app = angular.module('myApp', []);
+        app.controller('myController', function($scope) {
+          $scope.a = 'Batman';
+          $scope.b = 'Is Bruce Wayne';
+        });
     </script>
   </body>
 </html>
